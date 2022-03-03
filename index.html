@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>izdiharalwin | Bookshelf Apps</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/kasumi.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#gotoinputbuku">Input Buku</a>
+            <a href="#gotobookshelf">History</a>
+            <a href="#home">Search 🔍</a>
+        </nav>
+    </header>
+    <main>
+        <div id="home">
+            <h1 class="welcome">
+                Welcome to Bookshelf Apps
+            </h1>
+            <p>
+                Silakan <a href="#gotoinputbuku"><button id="btninputbuku">Input Buku</button></a> atau Masukkan Judul Buku
+            </p>
+            <section class="search_section" id="searchSection">
+                <form id="searchBook">
+                    <input id="searchBookTitle" type="text" placeholder="Masukkan Judul Buku.. ">
+                    <button id="searchSubmit" type="submit">Search</button>
+                </form>
+                <div id="searchResult" class="book_list"></div>
+            </section>
+        </div>
+
+        <h1 id="gotoinputbuku"></h1>
+        <div class="wrapper">
+            <h1>
+                Input Buku
+            </h1>
+            <section class="input_section" id="inputSection">
+                <h2>Masukkan Buku Baru</h2>
+                <form id="inputBook">
+                    <div class="input" id="sectionTitle">
+                        <label for="inputBookTitle">Judul</label>
+                        <input id="inputBookTitle" type="text">
+                        <small class="error-display" id="errorTitle">*Wajib Diisi</small>
+                    </div>
+                    <div class="input" id="sectionAuthor">
+                        <label for="inputBookAuthor">Penulis</label>
+                        <input id="inputBookAuthor" type="text">
+                        <small class="error-display" id="errorAuthor">*Wajib Diisi</small>
+                    </div>
+                    <div class="input" id="sectionYear">
+                        <label for="inputBookYear">Tahun</label>
+                        <input id="inputBookYear" type="number">
+                        <small class="error-display" id="errorYear">*Wajib Diisi</small>
+                    </div>
+                    <div class="input_inline">
+                        <label for="inputBookIsComplete">Selesai dibaca</label>
+                        <input id="inputBookIsComplete" type="checkbox">
+                    </div>
+                    <button id="bookSubmit" type="button">Masukkan Buku</button>
+                </form>
+            </section>
+
+            <h1 id="gotobookshelf"></h1>
+            <h1>
+                History
+            </h1>
+            <section class="book_shelf" id="bookShelfUncompleted">
+                <h3>Belum selesai dibaca</h3>
+                <div id="incompleteBookshelfList" class="book_list">
+                    
+                </div>
+            </section>
+
+            <section class="book_shelf" id="bookShelfCompleted">
+                <h3>Selesai dibaca</h3>
+                <div id="completeBookshelfList" class="book_list">
+                    
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="js/script.js" type="text/javascript"></script>
+    <footer>
+        Copyright <a href="https://linktr.ee/izdiharalwin">izdiharalwin</a> &#169; 2022
+    </footer>
+</body>
+</html>
