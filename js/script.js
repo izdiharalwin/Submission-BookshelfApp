@@ -51,7 +51,7 @@ window.addEventListener("load", function(){
 btnSearch.addEventListener("click",function(e) {
     e.preventDefault()
     if (localStorage.getItem(localStorageKey) == null) {    
-        return alert("Tidak ada data buku")
+        sweetAlertError();
     }else{
         const getByTitle = getData().filter(a => a.title == searchValue.value.trim());
         if (getByTitle.length == 0) {
